@@ -25,8 +25,9 @@ collections:
           widget: "hidden",
           default: "sponsors",
         }
-      - { label: "Sponsor Name", name: "title", widget: "string" }
-      - { label: "Sponsor Image", name: "imgLink", widget: "image" }
+        [
+      - { label: "Sponsor Name", name: "title", widget: "string" },
+      - { label: "Sponsor Image", name: "imgLink", widget: "image" }]
   - name: "Recent Events"
     label: "Recent Events"
     create: true
@@ -40,9 +41,10 @@ collections:
           widget: "hidden",
           default: "sponsors",
         }
-      - { label: "Event Name", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "date" }
-      - { label: "Event Link", name: "link", widget: "string" }
+        [
+      - { label: "Event Name", name: "title", widget: "string" },
+      - { label: "Date", name: "date", widget: "date" },
+      - { label: "Event Link", name: "link", widget: "string" }]
   - name: "BeyondSWE"
     label: "Beyond SWE"
     folder: "src/components/beyondSwe.js"
@@ -61,8 +63,8 @@ collections:
         name: "featuredLinks"
         widget: "list"
         fields:
-          - { label: "Link Title", name: "linkTitle", widget: "string" }
-          - { label: "Link", name: "link", widget: "string" }
+          [- { label: "Link Title", name: "linkTitle", widget: "string" },
+          - { label: "Link", name: "link", widget: "string" }]
   - name: "pages"
     label: "Pages"
     files:
