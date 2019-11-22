@@ -12,31 +12,46 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: "sponsors"
+    label: "Sponsors"
+    folder: "src/components/sponsors.js"
+    widget: "list"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "blog-post",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponsors"}
+      - {label: "Sponsor Name", name: "sponsorName", widget: "string"}
+      - {label: "Sponsor Image", name: "imgLink", widget: "string"}
+  - name: "Recent Events"
+    label: "Recent Events"
+    folder: "src/pages/blog"
+    widget: "list"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponsors"}
+      - {label: "Event Name", name: "eventName", widget: "string"}
+      - {label: "Date", name: "date", widget: "date"}
+      - {label: "Event Link", name: "link", widget: "string"}
+ - name: "BeyondSWE"
+    folder: "src/components/beyondSwe.js"
+    widget: "object"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "beyondSwe"}
+      - {label: "Section Title", name: "title", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - label: "Featured Links"
+        name: "featuredLinks"
+        widget: "list"
+        fields: 
+          - {label: "Link Title", name: "linkTitle", widget: "string"}
+          - {label: "Link", name: "link", widget: "string"}
   - name: "pages"
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Home Page"
         name: "index"
         fields:
           - {
