@@ -113,7 +113,13 @@ export const IndexPageTemplate = ({
   <Fragment>
     <section
       className='hero section'
-      // style="background: url('https://i.imgur.com/MgNHcA4.jpg') no-repeat center center fixed; background-size: cover;"
+      style={{
+        background: "url('https://i.imgur.com/MgNHcA4.jpg')",
+        noRepeat: true,
+        center: true,
+        fixed: true,
+        backgroundSize: "cover"
+      }}
     >
       <article className='hero__content z-depth-3'>
         <h1>{title}</h1>
@@ -138,7 +144,6 @@ export const IndexPageTemplate = ({
 
       <center>
         <div className='events z-depth-3'>
-          {}
           {/* <div className='events__row'>
             <span>General Body Meeting #3</span>
             <time>Wednesday, November 14</time>

@@ -58,3 +58,4 @@ const Footer = class extends React.Component {
 };
 
 export default Footer;
+

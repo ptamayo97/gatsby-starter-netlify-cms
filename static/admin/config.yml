@@ -19,9 +19,14 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponsors"}
-      - {label: "Sponsor Name", name: "sponsorName", widget: "string"}
-      - {label: "Sponsor Image", name: "imgLink", widget: "string"}
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "sponsors",
+        }
+      - { label: "Sponsor Name", name: "sponsorName", widget: "string" }
+      - { label: "Sponsor Image", name: "imgLink", widget: "string" }
   - name: "Recent Events"
     label: "Recent Events"
     folder: "src/pages/blog"
@@ -29,24 +34,35 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponsors"}
-      - {label: "Event Name", name: "eventName", widget: "string"}
-      - {label: "Date", name: "date", widget: "date"}
-      - {label: "Event Link", name: "link", widget: "string"}
- - name: "BeyondSWE"
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "sponsors",
+        }
+      - { label: "Event Name", name: "eventName", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Event Link", name: "link", widget: "string" }
+  - name: "BeyondSWE"
+    label: "Beyond SWE"
     folder: "src/components/beyondSwe.js"
     widget: "object"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "beyondSwe"}
-      - {label: "Section Title", name: "title", widget: "string"}
-      - {label: "description", name: "description", widget: "string"}
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "beyondSwe",
+        }
+      - { label: "Section Title", name: "title", widget: "string" }
+      - { label: "description", name: "description", widget: "string" }
       - label: "Featured Links"
         name: "featuredLinks"
         widget: "list"
-        fields: 
-          - {label: "Link Title", name: "linkTitle", widget: "string"}
-          - {label: "Link", name: "link", widget: "string"}
+        fields:
+          - { label: "Link Title", name: "linkTitle", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
   - name: "pages"
     label: "Pages"
     files:
