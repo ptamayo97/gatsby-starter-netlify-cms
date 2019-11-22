@@ -112,85 +112,80 @@ export const IndexPageTemplate = ({
   // </div>
   <Fragment>
     <section
-      className="hero section"
+      className='hero section'
       // style="background: url('https://i.imgur.com/MgNHcA4.jpg') no-repeat center center fixed; background-size: cover;"
     >
-      <article className="hero__content z-depth-3">
-        <h1>Society of Women Engineers</h1>
-        <img src="/assets/img/zag.svg" alt="" />
-        <p>
-          UC San Diego Society of Women Engineers informs, nurtures, and
-          encourages women to attain high levels of education and professional
-          achievement. Our members serve as role models to pre-college and
-          engineering students.
-        </p>
+      <article className='hero__content z-depth-3'>
+        <h1>{title}</h1>
+        <img src='/assets/img/zag.svg' alt='' />
+        <p>{subheading}</p>
       </article>
     </section>
-    <section className="section tabs">
-      <span className="z-depth-3">
-        <a href="/social">Social</a>
+    <section className='section tabs'>
+      <span className='z-depth-3'>
+        <a href='/social'>Social</a>
       </span>
-      <span className="z-depth-3">
-        <a href="/professional">Professional</a>
+      <span className='z-depth-3'>
+        <a href='/professional'>Professional</a>
       </span>
-      <span className="z-depth-3">
-        <a href="/outreach">Outreach</a>
+      <span className='z-depth-3'>
+        <a href='/outreach'>Outreach</a>
       </span>
     </section>
 
-    <main className="section main">
-      <h1 className="main__title">Recent Events</h1>
+    <main className='section main'>
+      <h1 className='main__title'>Recent Events</h1>
 
       <center>
-        <div className="events z-depth-3">
-          <div className="events__row">
+        <div className='events z-depth-3'>
+          <div className='events__row'>
             <span>General Body Meeting #3</span>
             <time>Wednesday, November 14</time>
             <span>
               <a
-                href="https://www.facebook.com/events/277367959765412/"
-                target="_blank noopener noreferrer"
+                href='https://www.facebook.com/events/277367959765412/'
+                target='_blank noopener noreferrer'
               >
                 RSVP
               </a>
             </span>
           </div>
 
-          <div className="events__row">
+          <div className='events__row'>
             <span>Amway Info Session with AICHE</span>
             <time>Thursday, October 4</time>
             <span>
               <a
-                href="https://www.facebook.com/events/555050548268485/"
-                target="_blank noopener noreferrer"
+                href='https://www.facebook.com/events/555050548268485/'
+                target='_blank noopener noreferrer'
               >
                 RSVP
               </a>
             </span>
           </div>
 
-          <div className="events__row">
+          <div className='events__row'>
             <span>
               Anita Borg Leadership and Engagement (ABLE) Program KickOff Event
             </span>
             <time>Saturday, November 17</time>
             <span>
               <a
-                href="http://education.sdsc.edu/studenttech/?page_id=678"
-                target="_blank noopener noreferrer"
+                href='http://education.sdsc.edu/studenttech/?page_id=678'
+                target='_blank noopener noreferrer'
               >
                 RSVP
               </a>
             </span>
           </div>
 
-          <div className="events__row">
+          <div className='events__row'>
             <span>UCSD SWE Presents: Envision</span>
             <time>Saturday, February 2</time>
             <span>
               <a
-                href="http://ucsdenvision.wixsite.com/envision"
-                target="_blank noopener noreferrer"
+                href='http://ucsdenvision.wixsite.com/envision'
+                target='_blank noopener noreferrer'
               >
                 RSVP
               </a>
