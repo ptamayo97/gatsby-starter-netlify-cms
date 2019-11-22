@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import "../components/style.css";
 import Layout from "../components/Layout";
+import RecentEvents from "../components/RecentEvents";
 
 export const IndexPageTemplate = ({
   image,
@@ -140,65 +141,7 @@ export const IndexPageTemplate = ({
     </section>
 
     <main className='section main'>
-      <h1 className='main__title'>Recent Events</h1>
-
-      <center>
-        <div className='events z-depth-3'>
-          {/* <div className='events__row'>
-            <span>General Body Meeting #3</span>
-            <time>Wednesday, November 14</time>
-            <span>
-              <a
-                href='https://www.facebook.com/events/277367959765412/'
-                target='_blank noopener noreferrer'
-              >
-                RSVP
-              </a>
-            </span>
-          </div>
-
-          <div className='events__row'>
-            <span>Amway Info Session with AICHE</span>
-            <time>Thursday, October 4</time>
-            <span>
-              <a
-                href='https://www.facebook.com/events/555050548268485/'
-                target='_blank noopener noreferrer'
-              >
-                RSVP
-              </a>
-            </span>
-          </div>
-
-          <div className='events__row'>
-            <span>
-              Anita Borg Leadership and Engagement (ABLE) Program KickOff Event
-            </span>
-            <time>Saturday, November 17</time>
-            <span>
-              <a
-                href='http://education.sdsc.edu/studenttech/?page_id=678'
-                target='_blank noopener noreferrer'
-              >
-                RSVP
-              </a>
-            </span>
-          </div>
-
-          <div className='events__row'>
-            <span>UCSD SWE Presents: Envision</span>
-            <time>Saturday, February 2</time>
-            <span>
-              <a
-                href='http://ucsdenvision.wixsite.com/envision'
-                target='_blank noopener noreferrer'
-              >
-                RSVP
-              </a>
-            </span>
-          </div> */}
-        </div>
-      </center>
+     
     </main>
   </Fragment>
 );
@@ -248,7 +191,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
+        image { 
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -257,25 +200,6 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
