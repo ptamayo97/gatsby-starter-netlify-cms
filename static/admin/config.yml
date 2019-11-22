@@ -14,8 +14,8 @@ public_folder: /img
 collections:
   - name: "sponsors"
     label: "Sponsors"
-       create: true
-    folder: "src/components/sponsors.js"
+    create: true
+    folder: "src/components/Sponsors/index.md"
     widget: "list"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -25,13 +25,12 @@ collections:
           widget: "hidden",
           default: "sponsors",
         }
-        [
-      - { label: "Sponsor Name", name: "title", widget: "string" },
-      - { label: "Sponsor Image", name: "imgLink", widget: "image" }]
+      - { label: "Sponsor Name", name: "title", widget: "string" }
+      - { label: "Sponsor Image", name: "imgLink", widget: "image" }
   - name: "Recent Events"
     label: "Recent Events"
     create: true
-    folder: "src/pages/RecentEvents"
+    folder: "src/components/RecentEvents/index.md"
     widget: "list"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -39,15 +38,15 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "index-page",
+          default: "recent-events",
         }
-        [
-      - { label: "Event Name", name: "title", widget: "string" },
-      - { label: "Date", name: "date", widget: "date" },
-      - { label: "Event Link", name: "link", widget: "string" }]
+
+      - { label: "Event Name", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Event Link", name: "link", widget: "string" }
   - name: "BeyondSWE"
     label: "Beyond SWE"
-    folder: "src/components/beyondSwe.js"
+    folder: "src/components/BeyondSwe/index.md"
     widget: "object"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -63,8 +62,8 @@ collections:
         name: "featuredLinks"
         widget: "list"
         fields:
-          [- { label: "Link Title", name: "linkTitle", widget: "string" },
-          - { label: "Link", name: "link", widget: "string" }]
+          - { label: "Link Title", name: "linkTitle", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
   - name: "pages"
     label: "Pages"
     files:
@@ -82,7 +81,7 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
-           
+
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
