@@ -26,7 +26,7 @@ collections:
           default: "sponsors",
         }
       - { label: "Sponsor Name", name: "sponsorName", widget: "string" }
-      - { label: "Sponsor Image", name: "imgLink", widget: "string" }
+      - { label: "Sponsor Image", name: "imgLink", widget: "image" }
   - name: "Recent Events"
     label: "Recent Events"
     folder: "src/pages/blog"
