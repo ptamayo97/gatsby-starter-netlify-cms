@@ -3,7 +3,10 @@ templateKey: index-page
 title: Society of Women Engineers
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
-subheading: hello from netlify
+subheading: >-
+  UC San Diego Society of Women Engineers informs, nurtures, and encourages
+  women to attain high levels of education and professional achievement. Our
+  members serve as role models to pre-college and engineering students.
 mainpitch:
   title: Why Kaldi
   description: >
