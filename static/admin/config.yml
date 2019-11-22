@@ -16,7 +16,6 @@ collections:
     label: "Sponsors"
     folder: "src/components/sponsors.js"
     widget: "list"
-    allow_add: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
@@ -29,9 +28,10 @@ collections:
       - { label: "Sponsor Image", name: "imgLink", widget: "image" }
   - name: "Recent Events"
     label: "Recent Events"
+    create: true
+    identifier_field: "recentEvents"
     folder: "src/pages/recentEvents.js"
     widget: "list"
-    allow_add: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
@@ -40,13 +40,14 @@ collections:
           widget: "hidden",
           default: "sponsors",
         }
-      - { label: "Event Name", name: "eventName", widget: "string" }
+      - { label: "Event Name", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
       - { label: "Event Link", name: "link", widget: "string" }
   - name: "BeyondSWE"
     label: "Beyond SWE"
     folder: "src/components/beyondSwe.js"
     widget: "object"
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
@@ -60,7 +61,6 @@ collections:
       - label: "Featured Links"
         name: "featuredLinks"
         widget: "list"
-        allow_add: true
         fields:
           - { label: "Link Title", name: "linkTitle", widget: "string" }
           - { label: "Link", name: "link", widget: "string" }
