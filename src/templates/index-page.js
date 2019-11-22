@@ -138,7 +138,8 @@ export const IndexPageTemplate = ({
 
       <center>
         <div className='events z-depth-3'>
-          <div className='events__row'>
+          {}
+          {/* <div className='events__row'>
             <span>General Body Meeting #3</span>
             <time>Wednesday, November 14</time>
             <span>
@@ -190,7 +191,7 @@ export const IndexPageTemplate = ({
                 RSVP
               </a>
             </span>
-          </div>
+          </div> */}
         </div>
       </center>
     </main>
