@@ -14,6 +14,7 @@ public_folder: /img
 collections:
   - name: "sponsors"
     label: "Sponsors"
+       create: true
     folder: "src/components/sponsors.js"
     widget: "list"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -24,12 +25,11 @@ collections:
           widget: "hidden",
           default: "sponsors",
         }
-      - { label: "Sponsor Name", name: "sponsorName", widget: "string" }
+      - { label: "Sponsor Name", name: "title", widget: "string" }
       - { label: "Sponsor Image", name: "imgLink", widget: "image" }
   - name: "Recent Events"
     label: "Recent Events"
     create: true
-    identifier_field: "recentEvents"
     folder: "src/pages/recentEvents.js"
     widget: "list"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -47,7 +47,6 @@ collections:
     label: "Beyond SWE"
     folder: "src/components/beyondSwe.js"
     widget: "object"
-    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
