@@ -132,6 +132,8 @@ collections:
             - { label: "Event Title", name: "socialEventTitle", widget: "string" }
             - { label: "Event Description ", name: "socialEventDescription", widget: "string" }
             - { label: "Photo", name: "socialEventImage", widget: "image" }
+          - { label: "Calendar Link Title", name: "calLinkTitle", widget: "string"}
+          - { label: "Calendar URL", name: "calURL", widget: "string"}
       - file: "src/pages/professional/index.md"
         label: "Professional Page"
         name: "professional"
@@ -156,6 +158,8 @@ collections:
             - { label: "Event Title", name: "profEventTitle", widget: "string" }
             - { label: "Event Description ", name: "profEventDescription", widget: "string" }
             - { label: "Photo", name: "profEventImage", widget: "image" }
+          - { label: "Calendar Link Title", name: "calLinkTitle", widget: "string"}
+          - { label: "Calendar URL", name: "calURL", widget: "string"}
       - file: "src/pages/outreach/index.md"
         label: "Outreach Page"
         name: "outreach"
@@ -180,6 +184,8 @@ collections:
             - { label: "Event Title", name: "outreachEventTitle", widget: "string" }
             - { label: "Event Description ", name: "outreachEventDescription", widget: "string" }
             - { label: "Photo", name: "outreachEventImage", widget: "image" }
+          - { label: "Calendar Link Title", name: "calLinkTitle", widget: "string"}
+          - { label: "Calendar URL", name: "calURL", widget: "string"}
       - file: "src/pages/contact/index.md"
         label: "contact Page"
         name: "contact"
