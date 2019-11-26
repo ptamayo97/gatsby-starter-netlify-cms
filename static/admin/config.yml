@@ -81,7 +81,6 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
 
       - file: "src/pages/about/index.md"
@@ -94,8 +93,9 @@ collections:
               widget: "hidden",
               default: "about-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Subheading, name: subheading, widget: string }
       - file: "src/pages/calendar/index.md"
         label: "Calendar Page"
         name: "calendar"
@@ -106,8 +106,15 @@ collections:
               widget: "hidden",
               default: "calendar-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Subheading, name: subheading, widget: string }
+          - {
+              label: "Calendar Link Title",
+              name: "calLinkTitle",
+              widget: "string",
+            }
+          - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/envision/index.md"
         label: "Envision Page"
         name: "envision"
