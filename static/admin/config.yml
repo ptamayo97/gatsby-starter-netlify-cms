@@ -96,6 +96,16 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Subheading, name: subheading, widget: string }
+          - {
+              label: "Main Section Heading",
+              name: sectionTitle,
+              widget: string,
+            }
+          - {
+              label: "Main Section Description",
+              name: sectionDescription,
+              widget: string,
+            }
       - file: "src/pages/calendar/index.md"
         label: "Calendar Page"
         name: "calendar"

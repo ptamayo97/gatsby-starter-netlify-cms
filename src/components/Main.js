@@ -1,13 +1,24 @@
 import React from "react";
-// import "./style.css";
-const Main = (props, { children }) => {
+import PropTypes from "prop-types";
+
+const Main = ({ mainTitle, mainDescription }, { children }) => {
+  console.log(mainTitle, mainDescription);
   return (
     <main className="section main">
-      <h1 className="main__title">{props.mainTitle}</h1>
-      <p className="lead subtitle">{props.mainDescription}</p>
+      <h1 className="main__title">{mainTitle}</h1>
+      <p className="lead subtitle">{mainDescription}</p>
       {children}
     </main>
   );
+};
+
+Main.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      mainTitle: PropTypes.string,
+      mainDescription: PropTypes.string
+    })
+  )
 };
 
 export default Main;

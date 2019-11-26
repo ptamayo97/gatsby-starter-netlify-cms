@@ -2,29 +2,24 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
 import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
-import RecentEvents from "../components/RecentEvents";
 import Tabs from "../components/Tabs";
-export const AboutPageTemplate = ({ title, image, subheading }) => {
+export const AboutPageTemplate = ({
+  title,
+  image,
+  subheading,
+  sectionTitle,
+  sectionDescription
+}) => {
   return (
     <Fragment>
       <HeroSection image={image} title={title} subheading={subheading} />
       <Tabs />
-      <main class="section main">
-        <h1 class="main__title">About SWE</h1>
-
-        <p class="lead">
-          UC San Diego Society of Women Engineers is a diverse group of
-          passionate young engineers excited about women in STEM. Through
-          outreach to K-12 students, socials with other female engineers,
-          networking workshops with industry, and technical teams, UCSD SWE
-          provides women engineers with a welcoming environment to grow
-          professionally and academically.
-        </p>
-      </main>
-
+      <Main
+        mainTitle={sectionTitle}
+        mainDescription={sectionDescription}
+      ></Main>
       <section class="section team">
         <h1 class="main__title team__title">SWE Officers</h1>
 
@@ -155,37 +150,56 @@ export const AboutPageTemplate = ({ title, image, subheading }) => {
 };
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  sectionTitle: PropTypes.string,
+  sectionDescription: PropTypes.string
 };
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        image={frontmatter.image}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
+        sectionTitle={frontmatter.sectionTitle}
+        sectionDescription={frontmatter.sectionDescription}
       />
     </Layout>
   );
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object
+    })
+  })
 };
 
 export default AboutPage;
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+  query AboutPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        subheading
+        sectionTitle
+        sectionDescription
       }
     }
   }

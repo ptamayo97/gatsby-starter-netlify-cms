@@ -18,7 +18,7 @@ export const OutreachPageTemplate = ({
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main mainTitle={sectionTitle} mainDesription={sectionDescription}></Main>
+    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}></Main>
   </Fragment>
 );
 
