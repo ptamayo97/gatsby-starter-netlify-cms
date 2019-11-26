@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { AboutPageTemplate } from "../../templates/about-page";
+import { CalendarPageTemplate } from "../../templates/calendar-page";
 
-const AboutPagePreview = ({ entry, getAsset }) => {
+const CalendarPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
 
   if (data) {
     return (
-      <AboutPageTemplate
+      <CalendarPageTemplate
         image={data.image}
         title={data.title}
         heading={data.heading}
@@ -22,11 +22,11 @@ const AboutPagePreview = ({ entry, getAsset }) => {
   }
 };
 
-AboutPagePreview.propTypes = {
+CalendarPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
   getAsset: PropTypes.func
 };
 
-export default AboutPagePreview;
+export default CalendarPagePreview;

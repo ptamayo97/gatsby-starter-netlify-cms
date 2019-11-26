@@ -127,6 +127,7 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
+          - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
       - file: "src/pages/social/index.md"
@@ -141,16 +142,17 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
+          - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
           - {
               label: "Events Section Title",
-              name: socialEventSectionTitle,
+              name: SectionTitle,
               widget: string,
             }
           - {
               label: "Events Section Description",
-              name: socialEventSectionDescription,
+              name: SectionDescription,
               widget: string,
             }
           - label: "Upcoming Events"
@@ -187,16 +189,17 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
+          - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
           - {
               label: "Events Section Title",
-              name: profEventSectionTitle,
+              name: SectionTitle,
               widget: string,
             }
           - {
               label: "Events Section Description",
-              name: profEventSectionDescription,
+              name: SectionDescription,
               widget: string,
             }
           - label: "Upcoming Events"
@@ -233,16 +236,15 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Description, name: description, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Events Section Title",
-              name: outreachEventSectionTitle,
+              name: sectionTitle,
               widget: string,
             }
           - {
               label: "Events Section Description",
-              name: outreachEventSectionDescription,
+              name: sectionDescription,
               widget: string,
             }
           - label: "Upcoming Events"
@@ -279,5 +281,6 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
+          - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }

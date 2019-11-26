@@ -8,13 +8,17 @@ import Main from "../components/Main";
 import RecentEvents from "../components/RecentEvents";
 import Tabs from "../components/Tabs";
 
-export const OutreachPageTemplate = ({ image, title, subheading }) => (
+export const OutreachPageTemplate = ({
+  image,
+  title,
+  subheading,
+  sectionTitle,
+  sectionDescription
+}) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main>
-      <RecentEvents />
-    </Main>
+    <Main mainTitle={sectionTitle} mainDesription={sectionDescription}></Main>
   </Fragment>
 );
 
@@ -23,11 +27,8 @@ OutreachPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  sectionTitle: PropTypes.string,
+  sectionDescription: PropTypes.string
 };
 
 const OutreachPage = ({ data }) => {
@@ -40,9 +41,8 @@ const OutreachPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        sectionTitle={frontmatter.sectionTitle}
+        sectionDescription={frontmatter.sectionDescription}
       />
     </Layout>
   );
@@ -71,6 +71,8 @@ export const pageQuery = graphql`
           }
         }
         subheading
+        sectionTitle
+        sectionDescription
       }
     }
   }

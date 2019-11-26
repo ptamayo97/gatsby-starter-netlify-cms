@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { AboutPageTemplate } from "../../templates/about-page";
+import { ProfessionalPageTemplate } from "../../templates/professional-page";
 
-const AboutPagePreview = ({ entry, getAsset }) => {
+const ProfessionalPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
 
   if (data) {
     return (
-      <AboutPageTemplate
+      <ProfessionalPageTemplate
         image={data.image}
         title={data.title}
         heading={data.heading}
@@ -22,11 +22,11 @@ const AboutPagePreview = ({ entry, getAsset }) => {
   }
 };
 
-AboutPagePreview.propTypes = {
+ProfessionalPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
   getAsset: PropTypes.func
 };
 
-export default AboutPagePreview;
+export default ProfessionalPagePreview;

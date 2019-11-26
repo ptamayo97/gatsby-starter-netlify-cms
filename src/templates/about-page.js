@@ -3,26 +3,15 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  // const PageContent = contentComponent || Content;
-
+import HeroSection from "../components/HeroSection";
+import Main from "../components/Main";
+import RecentEvents from "../components/RecentEvents";
+import Tabs from "../components/Tabs";
+export const AboutPageTemplate = ({ title, image, subheading }) => {
   return (
-    // <section className="section section--gradient">
-    //   <div className="container">
-    //     <div className="columns">
-    //       <div className="column is-10 is-offset-1">
-    //         <div className="section">
-    //           <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-    //             {title}
-    //           </h2>
-    //           <PageContent className="content" content={content} />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
     <Fragment>
+      <HeroSection image={image} title={title} subheading={subheading} />
+      <Tabs />
       <main class="section main">
         <h1 class="main__title">About SWE</h1>
 

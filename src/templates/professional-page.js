@@ -12,9 +12,7 @@ export const ProfessionalPageTemplate = ({ image, title, subheading }) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main>
-      <RecentEvents />
-    </Main>
+    <Main></Main>
   </Fragment>
 );
 
