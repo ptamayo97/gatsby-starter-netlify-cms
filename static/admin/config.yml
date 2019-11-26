@@ -147,12 +147,12 @@ collections:
           - { label: Description, name: description, widget: string }
           - {
               label: "Events Section Title",
-              name: SectionTitle,
+              name: sectionTitle,
               widget: string,
             }
           - {
               label: "Events Section Description",
-              name: SectionDescription,
+              name: sectionDescription,
               widget: string,
             }
           - label: "Upcoming Events"
@@ -194,12 +194,12 @@ collections:
           - { label: Description, name: description, widget: string }
           - {
               label: "Events Section Title",
-              name: SectionTitle,
+              name: sectionTitle,
               widget: string,
             }
           - {
               label: "Events Section Description",
-              name: SectionDescription,
+              name: sectionDescription,
               widget: string,
             }
           - label: "Upcoming Events"
