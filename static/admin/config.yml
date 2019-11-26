@@ -46,6 +46,7 @@ collections:
       - { label: "Event Link", name: "link", widget: "string" }
   - name: "BeyondSWE"
     label: "Beyond SWE"
+    create: true
     folder: "src/components/BeyondSwe/index.md"
     widget: "object"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -66,6 +67,7 @@ collections:
           - { label: "Link", name: "link", widget: "string" }
   - name: "pages"
     label: "Pages"
+    create: false
     files:
       - file: "src/pages/index.md"
         label: "Home Page"
@@ -83,7 +85,7 @@ collections:
           - { label: Subheading, name: subheading, widget: string }
 
       - file: "src/pages/about/index.md"
-        label: "About"
+        label: "About Page"
         name: "about"
         fields:
           - {
@@ -91,6 +93,18 @@ collections:
               name: "templateKey",
               widget: "hidden",
               default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/calendar/index.md"
+        label: "Calendar Page"
+        name: "calendar"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "calendar-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
@@ -122,18 +136,38 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
-          - { label: "Events Section Title", name: socialEventSectionTitle, widget: string }
-          - { label: "Events Section Description", name: socialEventSectionDescription, widget: string }
+          - {
+              label: "Events Section Title",
+              name: socialEventSectionTitle,
+              widget: string,
+            }
+          - {
+              label: "Events Section Description",
+              name: socialEventSectionDescription,
+              widget: string,
+            }
           - label: "Upcoming Events"
             name: "socialEvents"
             widget: "list"
             create: true
             fields:
-            - { label: "Event Title", name: "socialEventTitle", widget: "string" }
-            - { label: "Event Description ", name: "socialEventDescription", widget: "string" }
-            - { label: "Photo", name: "socialEventImage", widget: "image" }
-          - { label: "Calendar Link Title", name: "calLinkTitle", widget: "string"}
-          - { label: "Calendar URL", name: "calURL", widget: "string"}
+              - {
+                  label: "Event Title",
+                  name: "socialEventTitle",
+                  widget: "string",
+                }
+              - {
+                  label: "Event Description ",
+                  name: "socialEventDescription",
+                  widget: "string",
+                }
+              - { label: "Photo", name: "socialEventImage", widget: "image" }
+          - {
+              label: "Calendar Link Title",
+              name: "calLinkTitle",
+              widget: "string",
+            }
+          - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/professional/index.md"
         label: "Professional Page"
         name: "professional"
@@ -148,18 +182,38 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
-          - { label: "Events Section Title", name: profEventSectionTitle, widget: string }
-          - { label: "Events Section Description", name: profEventSectionDescription, widget: string }
+          - {
+              label: "Events Section Title",
+              name: profEventSectionTitle,
+              widget: string,
+            }
+          - {
+              label: "Events Section Description",
+              name: profEventSectionDescription,
+              widget: string,
+            }
           - label: "Upcoming Events"
             name: "profEvents"
             widget: "list"
             create: true
             fields:
-            - { label: "Event Title", name: "profEventTitle", widget: "string" }
-            - { label: "Event Description ", name: "profEventDescription", widget: "string" }
-            - { label: "Photo", name: "profEventImage", widget: "image" }
-          - { label: "Calendar Link Title", name: "calLinkTitle", widget: "string"}
-          - { label: "Calendar URL", name: "calURL", widget: "string"}
+              - {
+                  label: "Event Title",
+                  name: "profEventTitle",
+                  widget: "string",
+                }
+              - {
+                  label: "Event Description ",
+                  name: "profEventDescription",
+                  widget: "string",
+                }
+              - { label: "Photo", name: "profEventImage", widget: "image" }
+          - {
+              label: "Calendar Link Title",
+              name: "calLinkTitle",
+              widget: "string",
+            }
+          - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/outreach/index.md"
         label: "Outreach Page"
         name: "outreach"
@@ -174,18 +228,38 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
-          - { label: "Events Section Title", name: outreachEventSectionTitle, widget: string }
-          - { label: "Events Section Description", name: outreachEventSectionDescription, widget: string }
+          - {
+              label: "Events Section Title",
+              name: outreachEventSectionTitle,
+              widget: string,
+            }
+          - {
+              label: "Events Section Description",
+              name: outreachEventSectionDescription,
+              widget: string,
+            }
           - label: "Upcoming Events"
             name: "outreachEvents"
             widget: "list"
             create: true
             fields:
-            - { label: "Event Title", name: "outreachEventTitle", widget: "string" }
-            - { label: "Event Description ", name: "outreachEventDescription", widget: "string" }
-            - { label: "Photo", name: "outreachEventImage", widget: "image" }
-          - { label: "Calendar Link Title", name: "calLinkTitle", widget: "string"}
-          - { label: "Calendar URL", name: "calURL", widget: "string"}
+              - {
+                  label: "Event Title",
+                  name: "outreachEventTitle",
+                  widget: "string",
+                }
+              - {
+                  label: "Event Description ",
+                  name: "outreachEventDescription",
+                  widget: "string",
+                }
+              - { label: "Photo", name: "outreachEventImage", widget: "image" }
+          - {
+              label: "Calendar Link Title",
+              name: "calLinkTitle",
+              widget: "string",
+            }
+          - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/contact/index.md"
         label: "contact Page"
         name: "contact"

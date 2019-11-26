@@ -98,28 +98,28 @@ const Navbar = class extends React.Component {
         <nav id="menu" role="navigation" class="z-depth-3">
           <ul>
             <li>
-              <Link href="/index">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Link href="/calendar">Calendar</Link>
+              <Link to="/calendar">Calendar</Link>
             </li>
             <li>
-              <Link href="/envision">Envision</Link>
+              <Link to="/envision">Envision</Link>
             </li>
             <li>
-              <Link href="/social">Social</Link>
+              <Link to="/social">Social</Link>
             </li>
             <li>
-              <Link href="/professional">Professional</Link>
+              <Link to="/professional">Professional</Link>
             </li>
             <li>
-              <Link href="/outreach">Outreach</Link>
+              <Link to="/outreach">Outreach</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
