@@ -7,7 +7,7 @@ import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import RecentEvents from "../components/RecentEvents/index";
 import Tabs from "../components/Tabs";
-
+import "../components/style.css";
 export const IndexPageTemplate = ({
   image,
   title,
@@ -80,7 +80,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
         subheading
         sectionTitle
         sectionDescription

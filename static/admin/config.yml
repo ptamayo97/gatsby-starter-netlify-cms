@@ -12,59 +12,59 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "sponsors"
-    label: "Sponsors"
-    create: true
-    file: "src/components/Sponsors/index.md"
-    widget: "list"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "sponsors",
-        }
-      - { label: "Sponsor Name", name: "title", widget: "string" }
-      - { label: "Sponsor Image", name: "imgLink", widget: "image" }
-  - name: "Recent Events"
-    label: "Recent Events"
-    create: true
-    file: "src/components/RecentEvents/index.md"
-    widget: "list"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "recent-events",
-        }
-
-      - { label: "Event Name", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "date" }
-      - { label: "Event Link", name: "link", widget: "string" }
-  - name: "BeyondSWE"
-    label: "Beyond SWE"
-    create: true
-    file: "src/components/BeyondSwe/index.md"
-    widget: "object"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "beyondSwe",
-        }
-      - { label: "Section Title", name: "title", widget: "string" }
-      - { label: "description", name: "description", widget: "string" }
-      - label: "Featured Links"
-        name: "featuredLinks"
+  - name: "reusable-content"
+    label: "Reusable"
+    create: false
+    files:
+      - file: "src/components/Sponsors/index.md"
+        name: "sponsors"
+        label: "Sponsors"
+        create: true
         widget: "list"
         fields:
-          - { label: "Link Title", name: "linkTitle", widget: "string" }
-          - { label: "Link", name: "link", widget: "string" }
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "sponsors",
+            }
+          - { label: "Sponsor Name", name: "title", widget: "string" }
+          - { label: "Sponsor Image", name: "imgLink", widget: "image" }
+      - file: "src/components/RecentEvents"
+        name: "recent-events"
+        label: "Recent Events"
+        create: true
+        widget: "list"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "recent-events",
+            }
+          - { label: "Event Name", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "date" }
+          - { label: "Event Link", name: "link", widget: "string" }
+      - file: "src/components/BeyondSwe/index.md"
+        name: "BeyondSWE"
+        label: "Beyond SWE"
+        create: true
+        widget: "object"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "beyondSwe",
+            }
+          - { label: "Section Title", name: "title", widget: "string" }
+          - { label: "description", name: "description", widget: "string" }
+          - label: "Featured Links"
+            name: "featuredLinks"
+            widget: "list"
+            fields:
+              - { label: "Link Title", name: "linkTitle", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
   - name: "pages"
     label: "Pages"
     create: false
