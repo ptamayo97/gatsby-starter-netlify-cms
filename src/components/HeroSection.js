@@ -1,4 +1,5 @@
 import React from "react";
+import Zag from "./Zag";
 // import "./style.css";
 const HeroSection = props => {
   return (
@@ -14,7 +15,8 @@ const HeroSection = props => {
     >
       <article className="hero__content z-depth-3">
         <h1>{props.title}</h1>
-        <img src="/assets/img/zag.svg" alt="" />
+        {/* <Zag /> */}
+        <img src="../img/zag.svg" alt="" />
         <p>{props.subheading}</p>
       </article>
     </section>

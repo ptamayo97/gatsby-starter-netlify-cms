@@ -71,6 +71,8 @@ export const pageQuery = graphql`
           }
         }
         subheading
+        sectionTitle
+        sectionDescription
       }
     }
   }

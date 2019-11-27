@@ -13,8 +13,8 @@ public_folder: /img
 
 collections:
   - name: "reusable-content"
-    label: "Reusable"
-    create: false
+    label: "Reusable Content"
+    create: true
     files:
       - file: "src/components/Sponsors/index.md"
         name: "sponsors"
@@ -33,11 +33,11 @@ collections:
             name: "featuredSponsors"
             widget: "list"
             fields:
-            - { label: "Sponsor Name", name: "title", widget: "string" }
-            - { label: "Sponsor Image", name: "imgLink", widget: "image" }
-        - file: "src/components/SocialMedia/index.md"
-        name: "Social Media"
-        label: "socialMedia"
+              - { label: "Sponsor Name", name: "title", widget: "string" }
+              - { label: "Sponsor Image", name: "imgLink", widget: "image" }
+      - file: "src/components/SocialMedia/index.md"
+        name: "social-media"
+        label: "Social Media"
         create: true
         widget: "list"
         fields:
@@ -51,7 +51,7 @@ collections:
           - { label: "Instagram", name: "instagramLink", widget: "string" }
           - { label: "Email", name: "emailLink", widget: "string" }
       - file: "src/components/RecentEvents/index.md"
-        name: "Recent Events"
+        name: "recent-events"
         label: "Recent Events"
         create: true
         widget: "object"
@@ -210,12 +210,12 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "socialEventImage", widget: "image" }
-          - {
-              label: "Calendar Link Title",
-              name: "calLinkTitle",
-              widget: "string",
-            }
-          - { label: "Calendar URL", name: "calURL", widget: "string" }
+              - {
+                  label: "Calendar Link Title",
+                  name: "calLinkTitle",
+                  widget: "string",
+                }
+              - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/professional/index.md"
         label: "Professional Page"
         name: "professional"
@@ -257,12 +257,12 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "profEventImage", widget: "image" }
-          - {
-              label: "Calendar Link Title",
-              name: "calLinkTitle",
-              widget: "string",
-            }
-          - { label: "Calendar URL", name: "calURL", widget: "string" }
+              - {
+                  label: "Calendar Link Title",
+                  name: "calLinkTitle",
+                  widget: "string",
+                }
+              - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/outreach/index.md"
         label: "Outreach Page"
         name: "outreach"
@@ -302,12 +302,12 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "outreachEventImage", widget: "image" }
-          - {
-              label: "Calendar Link Title",
-              name: "calLinkTitle",
-              widget: "string",
-            }
-          - { label: "Calendar URL", name: "calURL", widget: "string" }
+              - {
+                  label: "Calendar Link Title",
+                  name: "calLinkTitle",
+                  widget: "string",
+                }
+              - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/contact/index.md"
         label: "contact Page"
         name: "contact"
@@ -319,4 +319,4 @@ collections:
               default: "contact-page",
             }
           - { label: Section Title, name: title, widget: string }
-          - { label: Submit Link, name: submitLink, widget: string}
+          - { label: Submit Link, name: submitLink, widget: string }
