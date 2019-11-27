@@ -12,6 +12,8 @@ const SocialPagePreview = ({ entry, getAsset }) => {
         title={data.title}
         heading={data.heading}
         subheading={data.subheading}
+        sectionTitle={data.sectionTitle}
+        sectionDescription={data.sectionDescription}
         description={data.description}
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
