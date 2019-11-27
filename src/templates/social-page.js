@@ -5,16 +5,13 @@ import "../components/style.css";
 import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
-import RecentEvents from "../components/RecentEvents";
 import Tabs from "../components/Tabs";
 
 export const SocialPageTemplate = ({ image, title, subheading }) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main>
-      <RecentEvents />
-    </Main>
+    <Main></Main>
   </Fragment>
 );
 

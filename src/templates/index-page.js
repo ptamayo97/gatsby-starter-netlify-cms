@@ -5,14 +5,20 @@ import "../components/style.css";
 import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
-import RecentEvents from "../components/RecentEvents";
+import RecentEvents from "../components/RecentEvents/index";
 import Tabs from "../components/Tabs";
 
-export const IndexPageTemplate = ({ image, title, subheading }) => (
+export const IndexPageTemplate = ({
+  image,
+  title,
+  subheading,
+  sectionTitle,
+  sectionDescription
+}) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main>
+    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}>
       <RecentEvents />
     </Main>
   </Fragment>
@@ -24,6 +30,8 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
+  sectionTitle: PropTypes.string,
+  sectionDescription: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array
@@ -41,6 +49,8 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
+        sectionTitle={frontmatter.sectionTitle}
+        sectionDescription={frontmatter.sectionDescription}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -72,6 +82,8 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        sectionTitle
+        sectionDescription
       }
     }
   }

@@ -5,7 +5,6 @@ import "../components/style.css";
 import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
-import RecentEvents from "../components/RecentEvents";
 import Tabs from "../components/Tabs";
 
 export const OutreachPageTemplate = ({
