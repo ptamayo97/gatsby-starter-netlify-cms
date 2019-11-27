@@ -20,6 +20,25 @@ collections:
         name: "sponsors"
         label: "Sponsors"
         create: true
+        widget: "object"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "sponsors",
+            }
+          - { label: "Section Title", name: "title", widget: "string" }
+          - label: "Featured Sponsors"
+            name: "featuredSponsors"
+            widget: "list"
+            fields:
+            - { label: "Sponsor Name", name: "title", widget: "string" }
+            - { label: "Sponsor Image", name: "imgLink", widget: "image" }
+        - file: "src/components/SocialMedia/index.md"
+        name: "Social Media"
+        label: "socialMedia"
+        create: true
         widget: "list"
         fields:
           - {
@@ -28,13 +47,14 @@ collections:
               widget: "hidden",
               default: "sponsors",
             }
-          - { label: "Sponsor Name", name: "title", widget: "string" }
-          - { label: "Sponsor Image", name: "imgLink", widget: "image" }
-      - file: "src/components/RecentEvents"
-        name: "recent-events"
+          - { label: "Facebook", name: "facebookLink", widget: "string" }
+          - { label: "Instagram", name: "instagramLink", widget: "string" }
+          - { label: "Email", name: "emailLink", widget: "string" }
+      - file: "src/components/RecentEvents/index.md"
+        name: "Recent Events"
         label: "Recent Events"
         create: true
-        widget: "list"
+        widget: "object"
         fields:
           - {
               label: "Template Key",
@@ -42,9 +62,14 @@ collections:
               widget: "hidden",
               default: "recent-events",
             }
-          - { label: "Event Name", name: "title", widget: "string" }
-          - { label: "Date", name: "date", widget: "date" }
-          - { label: "Event Link", name: "link", widget: "string" }
+          - { label: "Section Title", name: "title", widget: "string" }
+          - label: "Featured Events"
+            name: "featuredEvents"
+            widget: "list"
+            fields:
+              - { label: "Event Name", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "date" }
+              - { label: "Event Link", name: "link", widget: "string" }
       - file: "src/components/BeyondSwe/index.md"
         name: "BeyondSWE"
         label: "Beyond SWE"
@@ -293,8 +318,5 @@ collections:
               widget: "hidden",
               default: "contact-page",
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Subheading, name: subheading, widget: string }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Description, name: description, widget: string }
+          - { label: Section Title, name: title, widget: string }
+          - { label: Submit Link, name: submitLink, widget: string}
