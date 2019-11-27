@@ -15,7 +15,7 @@ collections:
   - name: "sponsors"
     label: "Sponsors"
     create: true
-    folder: "src/components/Sponsors/index.md"
+    file: "src/components/Sponsors/index.md"
     widget: "list"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -30,7 +30,7 @@ collections:
   - name: "Recent Events"
     label: "Recent Events"
     create: true
-    folder: "src/components/RecentEvents/index.md"
+    file: "src/components/RecentEvents/index.md"
     widget: "list"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -47,7 +47,7 @@ collections:
   - name: "BeyondSWE"
     label: "Beyond SWE"
     create: true
-    folder: "src/components/BeyondSwe/index.md"
+    file: "src/components/BeyondSwe/index.md"
     widget: "object"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
