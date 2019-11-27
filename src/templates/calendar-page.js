@@ -5,7 +5,7 @@ import "../components/style.css";
 import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
-import RecentEvents from "../components/RecentEvents/index";
+import RecentEvents from "./recent-events";
 import Tabs from "../components/Tabs";
 
 export const CalendarPageTemplate = ({ image, title, subheading }) => (

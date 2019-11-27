@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Beyond from "../components/BeyondSwe/index";
+import Beyond from "../pages/beyond-swe";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 

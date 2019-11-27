@@ -71,7 +71,7 @@ collections:
               - { label: "Date", name: "date", widget: "date" }
               - { label: "Event Link", name: "link", widget: "string" }
       - file: "src/pages/BeyondSwe/index.md"
-        name: "BeyondSWE"
+        name: "beyond-swe"
         label: "Beyond SWE"
         create: false
         widget: "object"
@@ -80,7 +80,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "beyondSwe",
+              default: "beyond-swe",
             }
           - { label: "Section Title", name: "title", widget: "string" }
           - { label: "description", name: "description", widget: "string" }
