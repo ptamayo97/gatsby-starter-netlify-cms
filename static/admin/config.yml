@@ -34,7 +34,7 @@ collections:
             widget: "list"
             fields:
               - { label: "Sponsor Name", name: "title", widget: "string" }
-              - { label: "Sponsor Image", name: "imgLink", widget: "image" }
+              - { label: "Sponsor Image", name: "image", widget: "image" }
       - file: "src/pages/SocialMedia/index.md"
         name: "social-media"
         label: "Social Media"
@@ -105,7 +105,7 @@ collections:
               default: "index-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Main Section Heading",
@@ -123,7 +123,7 @@ collections:
               default: "about-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Main Section Heading",
@@ -146,7 +146,7 @@ collections:
               default: "calendar-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Calendar Link Title",
@@ -165,7 +165,7 @@ collections:
               default: "envision-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
@@ -180,7 +180,7 @@ collections:
               default: "social-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
@@ -209,7 +209,7 @@ collections:
                   name: "socialEventDescription",
                   widget: "string",
                 }
-              - { label: "Photo", name: "socialEventImage", widget: "image" }
+              - { label: "Photo", name: "socialEventImage", widget: "string" }
               - {
                   label: "Calendar Link Title",
                   name: "calLinkTitle",
@@ -227,7 +227,7 @@ collections:
               default: "professional-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
@@ -256,7 +256,7 @@ collections:
                   name: "profEventDescription",
                   widget: "string",
                 }
-              - { label: "Photo", name: "profEventImage", widget: "image" }
+              - { label: "Photo", name: "profEventImage", widget: "string" }
               - {
                   label: "Calendar Link Title",
                   name: "calLinkTitle",
@@ -274,7 +274,7 @@ collections:
               default: "outreach-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
+          - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Events Section Title",
@@ -301,7 +301,7 @@ collections:
                   name: "outreachEventDescription",
                   widget: "string",
                 }
-              - { label: "Photo", name: "outreachEventImage", widget: "image" }
+              - { label: "Photo", name: "outreachEventImage", widget: "string" }
               - {
                   label: "Calendar Link Title",
                   name: "calLinkTitle",
