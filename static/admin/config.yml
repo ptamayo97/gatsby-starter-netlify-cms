@@ -34,7 +34,11 @@ collections:
             widget: "list"
             fields:
               - { label: "Sponsor Name", name: "title", widget: "string" }
-              - { label: "Sponsor Image", name: "image", widget: "image" }
+              - {
+                  label: "Sponsor Image",
+                  name: "sponsorImage",
+                  widget: "image",
+                }
       - file: "src/pages/SocialMedia/index.md"
         name: "social-media"
         label: "Social Media"
