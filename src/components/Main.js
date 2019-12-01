@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Main = ({ mainTitle, mainDescription }, { children }) => {
-  console.log(mainTitle, mainDescription);
+const Main = ({ mainTitle, mainDescription, children }) => {
   return (
     <main className="section main">
       <h1 className="main__title">{mainTitle}</h1>

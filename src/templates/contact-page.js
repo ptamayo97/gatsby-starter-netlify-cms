@@ -7,7 +7,13 @@ import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import Tabs from "../components/Tabs";
 
-export const ContactPageTemplate = ({ image, title, subheading }) => (
+export const ContactPageTemplate = ({
+  image,
+  title,
+  subheading,
+  sectionTitle,
+  sectionDescription
+}) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
@@ -18,13 +24,9 @@ export const ContactPageTemplate = ({ image, title, subheading }) => (
 ContactPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  sectionTitle: PropTypes.string,
+  sectionDescription: PropTypes.string
 };
 
 const ContactPage = ({ data }) => {

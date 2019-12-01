@@ -1,15 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
+// import PropTypes from "prop-types";
+// import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Beyond from "../pages/beyond-swe";
+import Beyond from "../templates/beyond-swe";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div>
+    <div className="js">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -49,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <Fragment>{children}</Fragment>
       <Beyond />
       <Footer />
     </div>

@@ -8,11 +8,17 @@ import Main from "../components/Main";
 import RecentEvents from "./recent-events";
 import Tabs from "../components/Tabs";
 
-export const CalendarPageTemplate = ({ image, title, subheading }) => (
+export const CalendarPageTemplate = ({
+  image,
+  title,
+  subheading,
+  sectionTitle,
+  sectionDescription
+}) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main>
+    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}>
       <RecentEvents />
     </Main>
   </Fragment>
@@ -21,13 +27,9 @@ export const CalendarPageTemplate = ({ image, title, subheading }) => (
 CalendarPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  sectionTitle: PropTypes.string,
+  sectionDescription: PropTypes.string
 };
 
 const CalendarPage = ({ data }) => {

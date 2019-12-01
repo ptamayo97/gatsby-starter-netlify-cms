@@ -7,24 +7,26 @@ import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import Tabs from "../components/Tabs";
 
-export const ProfessionalPageTemplate = ({ image, title, subheading }) => (
+export const ProfessionalPageTemplate = ({
+  image,
+  title,
+  subheading,
+  sectionTitle,
+  sectionDescription
+}) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main></Main>
+    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}></Main>
   </Fragment>
 );
 
 ProfessionalPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  sectionTitle: PropTypes.string,
+  sectionDescription: PropTypes.string
 };
 
 const ProfessionalPage = ({ data }) => {
@@ -35,11 +37,9 @@ const ProfessionalPage = ({ data }) => {
       <ProfessionalPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        sectionTitle={frontmatter.sectionTitle}
+        sectionDescription={frontmatter.sectionDescription}
       />
     </Layout>
   );
@@ -68,6 +68,8 @@ export const pageQuery = graphql`
           }
         }
         subheading
+        sectionTitle
+        sectionDescription
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
-import logo from "../img/logo.svg";
+// import github from "../img/github-icon.svg";
+// import logo from "../img/logo.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: "is-active"
+              navBarActiveClass: "nav-on"
             })
           : this.setState({
               navBarActiveClass: ""
@@ -91,11 +91,14 @@ const Navbar = class extends React.Component {
       //     </div>
       //   </div>
       // </nav>
-      <div id="pattern" class="pattern">
-        <a href="#menu" class="menu-link">
+      <div id="pattern" className="pattern">
+        <a
+          className="menu-link"
+          // onClick={() => this.toggleHamburger()}
+        >
           &#9776;
         </a>
-        <nav id="menu" role="navigation" class="z-depth-3">
+        <nav id="menu" role="navigation" className="z-depth-3 ">
           <ul>
             <li>
               <Link to="/">Home</Link>

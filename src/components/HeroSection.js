@@ -1,5 +1,5 @@
 import React from "react";
-import Zag from "./Zag";
+// import Zag from "./Zag";
 // import "./style.css";
 const HeroSection = props => {
   return (

@@ -27,32 +27,22 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   sectionTitle: PropTypes.string,
-  sectionDescription: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  sectionDescription: PropTypes.string
 };
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         sectionTitle={frontmatter.sectionTitle}
         sectionDescription={frontmatter.sectionDescription}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        // events={frontmatter.featuredEvents}
       />
     </Layout>
   );

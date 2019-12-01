@@ -7,24 +7,26 @@ import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import Tabs from "../components/Tabs";
 
-export const SocialPageTemplate = ({ image, title, subheading }) => (
+export const SocialPageTemplate = ({
+  image,
+  title,
+  subheading,
+  sectionTitle,
+  sectionDescription
+}) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main></Main>
+    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}></Main>
   </Fragment>
 );
 
 SocialPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  sectionTitle: PropTypes.string,
+  sectionDescription: PropTypes.string
 };
 
 const SocialPage = ({ data }) => {
@@ -35,11 +37,9 @@ const SocialPage = ({ data }) => {
       <SocialPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        sectionTitle={frontmatter.sectionTitle}
+        sectionDescription={frontmatter.sectionDescription}
       />
     </Layout>
   );

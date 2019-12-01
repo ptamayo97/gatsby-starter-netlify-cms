@@ -24,7 +24,6 @@ export const OutreachPageTemplate = ({
 OutreachPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
   sectionDescription: PropTypes.string
@@ -38,7 +37,6 @@ const OutreachPage = ({ data }) => {
       <OutreachPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         sectionTitle={frontmatter.sectionTitle}
         sectionDescription={frontmatter.sectionDescription}
