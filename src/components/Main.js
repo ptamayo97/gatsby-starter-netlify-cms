@@ -5,7 +5,10 @@ const Main = ({ mainTitle, mainDescription, children }) => {
   return (
     <main className="section main">
       <h1 className="main__title">{mainTitle}</h1>
-      <p className="lead subtitle">{mainDescription}</p>
+      {mainDescription ? (
+        <p className="lead subtitle">{mainDescription}</p>
+      ) : null}
+
       {children}
     </main>
   );

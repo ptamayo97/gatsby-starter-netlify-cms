@@ -109,7 +109,7 @@ collections:
               default: "index-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: string }
+          - { label: Image, name: imageUrl, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Main Section Heading",
@@ -127,7 +127,7 @@ collections:
               default: "about-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: string }
+          - { label: Image, name: imageUrl, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Main Section Heading",
@@ -150,7 +150,7 @@ collections:
               default: "calendar-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: string }
+          - { label: Image, name: imageUrl, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Calendar Link Title",
@@ -169,7 +169,7 @@ collections:
               default: "envision-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: string }
+          - { label: Image, name: imageUrl, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
@@ -184,7 +184,7 @@ collections:
               default: "social-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: string }
+          - { label: Image, name: imageUrl, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
@@ -231,7 +231,7 @@ collections:
               default: "professional-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: string }
+          - { label: Image, name: imageUrl, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Description, name: description, widget: string }
@@ -278,7 +278,7 @@ collections:
               default: "outreach-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: string }
+          - { label: Image, name: imageUrl, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
               label: "Events Section Title",

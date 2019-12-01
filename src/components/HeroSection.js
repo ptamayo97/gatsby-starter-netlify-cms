@@ -2,11 +2,15 @@ import React from "react";
 // import Zag from "./Zag";
 // import "./style.css";
 const HeroSection = props => {
+  console.log(
+    // `image: ${props.image}`
+    { props }
+  );
   return (
     <section
       className="hero section"
       style={{
-        background: "url('https://i.imgur.com/MgNHcA4.jpg')",
+        background: `url(${props.image})`,
         noRepeat: true,
         center: true,
         fixed: true,
