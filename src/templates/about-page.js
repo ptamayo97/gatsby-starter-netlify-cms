@@ -164,7 +164,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <AboutPageTemplate
-        image={frontmatter.image}
+        image={frontmatter.imageUrl}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}

@@ -35,7 +35,7 @@ const SocialPage = ({ data }) => {
   return (
     <Layout>
       <SocialPageTemplate
-        image={frontmatter.image}
+        image={frontmatter.imageUrl}
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         sectionTitle={frontmatter.sectionTitle}
@@ -60,13 +60,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "social-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        imageUrl
         subheading
         sectionTitle
         sectionDescription
