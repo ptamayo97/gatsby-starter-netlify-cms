@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Society of Women Engineers
-image: /img/home-jumbotron.jpg
+image: 'https://i.imgur.com/MgNHcA4.jpg'
 subheading: >-
   UC San Diego Society of Women Engineers informs, nurtures, and encourages
   women to attain high levels of education and professional achievement. Our
