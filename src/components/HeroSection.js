@@ -2,10 +2,7 @@ import React from "react";
 // import Zag from "./Zag";
 // import "./style.css";
 const HeroSection = props => {
-  console.log(
-    // `image: ${props.image}`
-    { props }
-  );
+  console.log({ props });
   return (
     <section
       className="hero section"

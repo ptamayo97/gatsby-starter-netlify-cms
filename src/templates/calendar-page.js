@@ -25,7 +25,7 @@ export const CalendarPageTemplate = ({
 );
 
 CalendarPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  image: PropTypes.string,
   title: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
@@ -38,7 +38,7 @@ const CalendarPage = ({ data }) => {
   return (
     <Layout>
       <CalendarPageTemplate
-        image={frontmatter.imageUrl}
+        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -65,7 +65,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "calendar-page" } }) {
       frontmatter {
         title
-        imageUrl
+        image
         subheading
         sectionTitle
         sectionDescription

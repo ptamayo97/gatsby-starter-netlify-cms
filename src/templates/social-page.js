@@ -22,7 +22,7 @@ export const SocialPageTemplate = ({
 );
 
 SocialPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  image: PropTypes.string,
   title: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
@@ -35,7 +35,7 @@ const SocialPage = ({ data }) => {
   return (
     <Layout>
       <SocialPageTemplate
-        image={frontmatter.imageUrl}
+        image={frontmatter.image}
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         sectionTitle={frontmatter.sectionTitle}
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "social-page" } }) {
       frontmatter {
         title
-        imageUrl
+        image
         subheading
         sectionTitle
         sectionDescription

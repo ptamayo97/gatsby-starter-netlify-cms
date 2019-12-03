@@ -22,7 +22,7 @@ export const ContactPageTemplate = ({
 );
 
 ContactPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  image: PropTypes.string,
   title: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
@@ -62,7 +62,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "contact-page" } }) {
       frontmatter {
         title
-        imageUrl
+        # imageUrl
         subheading
       }
     }

@@ -22,7 +22,7 @@ export const ProfessionalPageTemplate = ({
 );
 
 ProfessionalPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  image: PropTypes.string,
   title: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
@@ -35,7 +35,7 @@ const ProfessionalPage = ({ data }) => {
   return (
     <Layout>
       <ProfessionalPageTemplate
-        image={frontmatter.imageUrl}
+        image={frontmatter.image}
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         sectionTitle={frontmatter.sectionTitle}
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "professional-page" } }) {
       frontmatter {
         title
-        imageUrl
+        image
         subheading
         sectionTitle
         sectionDescription

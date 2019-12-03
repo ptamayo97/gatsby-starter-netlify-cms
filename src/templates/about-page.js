@@ -150,7 +150,7 @@ export const AboutPageTemplate = ({
 };
 
 AboutPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  image: PropTypes.string,
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -190,13 +190,7 @@ export const PageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        image
         subheading
         sectionTitle
         sectionDescription
