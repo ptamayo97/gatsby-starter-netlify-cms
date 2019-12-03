@@ -6,18 +6,22 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import Tabs from "../components/Tabs";
+import PageEvents from "./page-events";
 
 export const OutreachPageTemplate = ({
   image,
   title,
   subheading,
   sectionTitle,
-  sectionDescription
+  sectionDescription,
+  pageEvents
 }) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}></Main>
+    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}>
+      <PageEvents pageEvents={pageEvents} />
+    </Main>
   </Fragment>
 );
 
@@ -26,7 +30,8 @@ OutreachPageTemplate.propTypes = {
   title: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
-  sectionDescription: PropTypes.string
+  sectionDescription: PropTypes.string,
+  pageEvents: PropTypes.arrayOf(PropTypes.object)
 };
 
 const OutreachPage = ({ data }) => {
@@ -40,6 +45,7 @@ const OutreachPage = ({ data }) => {
         subheading={frontmatter.subheading}
         sectionTitle={frontmatter.sectionTitle}
         sectionDescription={frontmatter.sectionDescription}
+        pageEvents={frontmatter.pageEvents}
       />
     </Layout>
   );
@@ -64,6 +70,11 @@ export const pageQuery = graphql`
         subheading
         sectionTitle
         sectionDescription
+        pageEvents {
+          eventDescription
+          eventImage
+          eventTitle
+        }
       }
     }
   }
