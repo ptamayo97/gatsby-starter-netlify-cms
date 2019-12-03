@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-import { StaticQuery, graphql } from "gatsby";
+import React from "react";
 
 const PageEvents = props => {
   return (
