@@ -139,6 +139,15 @@ collections:
               name: sectionDescription,
               widget: string,
             }
+          - label: "SWE Officers"
+            name: "sweOfficers"
+            widget: "list"
+            create: true
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Position, name: position, widget: string }
+              - { label: Image, name: image, widget: string }
       - file: "src/pages/calendar/index.md"
         label: "Calendar Page"
         name: "calendar"
