@@ -11,9 +11,7 @@ const Sponsors = () => {
               title
               featuredSponsors {
                 title
-                imgLink {
-                  id
-                }
+                sponsorImage
               }
             }
           }
@@ -26,9 +24,9 @@ const Sponsors = () => {
             <div className="row">
               {data.markdownRemark.frontmatter.featuredSponsors.map(
                 (sponsor, idx) => (
-                  <div className="col-md-3" key={idx}>
+                  <div className="col-md-4" key={idx}>
                     <figure>
-                      <img src={sponsor.imgLink} alt={sponsor.title} />
+                      <img src={sponsor.sponsorImage} alt={sponsor.title} />
                     </figure>
                   </div>
                 )
