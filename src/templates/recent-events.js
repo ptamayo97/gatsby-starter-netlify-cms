@@ -23,17 +23,19 @@ const RecentEvents = () => {
       render={data => (
         <center>
           <div className="events z-depth-3">
-            {data.markdownRemark.frontmatter.featuredEvents.map(event => (
-              <div className="events__row">
-                <span>{event.title}</span>
-                <time>{moment(event.date).format("dddd, MMMM D")}</time>
-                <span>
-                  <a href={event.link} target="_blank noopener noreferrer">
-                    RSVP
-                  </a>
-                </span>
-              </div>
-            ))}
+            {data.markdownRemark.frontmatter.featuredEvents.map(
+              (event, idx) => (
+                <div className="events__row" key={idx}>
+                  <span>{event.title}</span>
+                  <time>{moment(event.date).format("dddd, MMMM D")}</time>
+                  <span>
+                    <a href={event.link} target="_blank noopener noreferrer">
+                      RSVP
+                    </a>
+                  </span>
+                </div>
+              )
+            )}
           </div>
         </center>
       )}

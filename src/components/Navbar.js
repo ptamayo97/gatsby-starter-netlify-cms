@@ -94,6 +94,7 @@ const Navbar = class extends React.Component {
       <div id="pattern" className="pattern">
         <a
           className="menu-link"
+          href="javascript:void(0)"
           // onClick={() => this.toggleHamburger()}
         >
           &#9776;

@@ -23,8 +23,8 @@ const BeyondSwe = () => {
           <h3>{data.markdownRemark.frontmatter.title}</h3>
           <h4>{data.markdownRemark.frontmatter.description}</h4>
           <div className="beyond__tabs">
-            {data.markdownRemark.frontmatter.featuredLinks.map(link => (
-              <span>
+            {data.markdownRemark.frontmatter.featuredLinks.map((link, idx) => (
+              <span key={idx}>
                 <a href={link.link} target="_blank" rel="noopener noreferrer">
                   {link.linkTitle}
                 </a>
