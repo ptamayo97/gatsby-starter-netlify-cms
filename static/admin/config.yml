@@ -261,7 +261,7 @@ collections:
                   name: "eventDescription",
                   widget: "string",
                 }
-              - { label: "Photo", name: "profEventImage", widget: "string" }
+              - { label: "Photo", name: "eventImage", widget: "string" }
               # - {
               #     label: "Calendar Link Title",
               #     name: "calLinkTitle",
@@ -302,7 +302,7 @@ collections:
                   name: "eventDescription",
                   widget: "string",
                 }
-              - { label: "Photo", name: "outreachEventImage", widget: "string" }
+              - { label: "Photo", name: "eventImage", widget: "string" }
               # - {
               #     label: "Calendar Link Title",
               #     name: "calLinkTitle",
