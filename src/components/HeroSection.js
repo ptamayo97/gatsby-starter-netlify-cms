@@ -7,10 +7,7 @@ const HeroSection = props => {
     <section
       className="hero section"
       style={{
-        background: `url(${props.image})`,
-        noRepeat: true,
-        center: true,
-        fixed: true,
+        background: `url(${props.image}) no-repeat center center fixed`,
         backgroundSize: "cover"
       }}
     >
