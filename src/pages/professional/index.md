@@ -13,5 +13,8 @@ pageEvents:
   - eventDescription: ad;fljal;dfladjf;ljadf
     eventTitle: professional event 1
     profEventImage: 'https://i.imgur.com/W9kzquX.jpg'
+  - eventDescription: asdfasd;fsadfsdf
+    eventTitle: professional event 2
+    profEventImage: 'https://i.imgur.com/oW5c6T0.jpg'
 ---
 
