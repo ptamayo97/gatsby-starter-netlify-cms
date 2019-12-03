@@ -9,7 +9,10 @@ sectionDescription: >-
   about our annual outreach.
 pageEvents:
   - eventDescription: asdfasdfasdfasdfadsfas
+    eventImage: 'https://i.imgur.com/bk3c3nz.jpg'
     eventTitle: outreach event 1
-    outreachEventImage: 'https://i.imgur.com/bk3c3nz.jpg'
+  - eventDescription: asdfasdfasdfasdfasdfasdfasdfasdfasd
+    eventImage: 'https://i.imgur.com/rpcTaTl.jpg'
+    eventTitle: outreach event 2
 ---
 
