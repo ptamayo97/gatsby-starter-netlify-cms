@@ -171,8 +171,19 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Description, name: description, widget: string }
+          - { label: "Section Title", name: sectionTitle, widget: string }
+          - label: "Envision Events"
+            name: "pageEvents"
+            widget: "list"
+            create: true
+            fields:
+              - { label: "Event Title", name: "eventTitle", widget: "string" }
+              - {
+                  label: "Event Description ",
+                  name: "eventDescription",
+                  widget: "string",
+                }
+              - { label: "Photo", name: "eventImage", widget: "string" }
       - file: "src/pages/social/index.md"
         label: "Social Page"
         name: "social"

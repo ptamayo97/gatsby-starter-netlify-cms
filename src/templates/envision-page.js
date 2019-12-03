@@ -6,18 +6,22 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import Tabs from "../components/Tabs";
+import PageEvents from "./page-events";
 
 export const EnvisionPageTemplate = ({
   image,
   title,
   subheading,
   sectionTitle,
-  sectionDescription
+  sectionDescription,
+  pageEvents
 }) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}></Main>
+    <Main mainTitle={sectionTitle} mainDescription={sectionDescription}>
+      <PageEvents pageEvents={pageEvents} />
+    </Main>
   </Fragment>
 );
 
@@ -26,7 +30,8 @@ EnvisionPageTemplate.propTypes = {
   title: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
-  sectionDescription: PropTypes.string
+  sectionDescription: PropTypes.string,
+  pageEvents: PropTypes.arrayOf(PropTypes.object)
 };
 
 const EnvisionPage = ({ data }) => {
@@ -37,13 +42,10 @@ const EnvisionPage = ({ data }) => {
       <EnvisionPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
         sectionTitle={frontmatter.sectionTitle}
         sectionDescription={frontmatter.sectionDescription}
+        pageEvents={frontmatter.pageEvents}
       />
     </Layout>
   );
@@ -68,6 +70,11 @@ export const pageQuery = graphql`
         subheading
         sectionTitle
         sectionDescription
+        pageEvents {
+          eventDescription
+          eventImage
+          eventTitle
+        }
       }
     }
   }
