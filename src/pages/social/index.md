@@ -11,7 +11,7 @@ sectionDescription: >-
   activities with SWE.
 pageEvents:
   - eventDescription: social event fa;sldfjal;sdjflkasjf
+    eventImage: 'https://i.imgur.com/LfoTXiq.jpg'
     eventTitle: social event 1
-    socialEventImage: 'https://i.imgur.com/LfoTXiq.jpg'
 ---
 
