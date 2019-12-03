@@ -197,18 +197,14 @@ collections:
               widget: string,
             }
           - label: "Upcoming Events"
-            name: "socialEvents"
+            name: "pageEvents"
             widget: "list"
             create: true
             fields:
-              - {
-                  label: "Event Title",
-                  name: "socialEventTitle",
-                  widget: "string",
-                }
+              - { label: "Event Title", name: "eventTitle", widget: "string" }
               - {
                   label: "Event Description ",
-                  name: "socialEventDescription",
+                  name: "eventDescription",
                   widget: "string",
                 }
               - { label: "Photo", name: "socialEventImage", widget: "string" }
@@ -244,18 +240,14 @@ collections:
               widget: string,
             }
           - label: "Upcoming Events"
-            name: "profEvents"
+            name: "pageEvents"
             widget: "list"
             create: true
             fields:
-              - {
-                  label: "Event Title",
-                  name: "profEventTitle",
-                  widget: "string",
-                }
+              - { label: "Event Title", name: "eventTitle", widget: "string" }
               - {
                   label: "Event Description ",
-                  name: "profEventDescription",
+                  name: "eventDescription",
                   widget: "string",
                 }
               - { label: "Photo", name: "profEventImage", widget: "string" }
@@ -289,18 +281,14 @@ collections:
               widget: string,
             }
           - label: "Upcoming Events"
-            name: "outreachEvents"
+            name: "pageEvents"
             widget: "list"
             create: true
             fields:
-              - {
-                  label: "Event Title",
-                  name: "outreachEventTitle",
-                  widget: "string",
-                }
+              - { label: "Event Title", name: "eventTitle", widget: "string" }
               - {
                   label: "Event Description ",
-                  name: "outreachEventDescription",
+                  name: "eventDescription",
                   widget: "string",
                 }
               - { label: "Photo", name: "outreachEventImage", widget: "string" }
