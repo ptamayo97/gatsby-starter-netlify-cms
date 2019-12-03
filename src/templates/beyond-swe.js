@@ -1,40 +1,39 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 
 const BeyondSwe = () => {
   return (
-    <aside className="beyond">
-      <h3>Beyond SWE</h3>
-      <h4>Come see what SWE has to offer outside UCSD!</h4>
-      <div className="beyond__tabs">
-        <span>
-          <a
-            href="http://www.swesandiego.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            San Diego SWE
-          </a>
-        </span>
-        <span>
-          <a
-            href="http://societyofwomenengineers.swe.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            National SWE
-          </a>
-        </span>
-        <span>
-          <a
-            href="http://societyofwomenengineers.swe.org/swenext"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            SWE Next
-          </a>
-        </span>
-      </div>
-    </aside>
+    <StaticQuery
+      query={graphql`
+        query BeyondSweComponentTemplate {
+          markdownRemark(frontmatter: { templateKey: { eq: "beyond-swe" } }) {
+            frontmatter {
+              title
+              description
+              featuredLinks {
+                link
+                linkTitle
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+        <aside className="beyond">
+          <h3>{data.markdownRemark.frontmatter.title}</h3>
+          <h4>{data.markdownRemark.frontmatter.description}</h4>
+          <div className="beyond__tabs">
+            {data.markdownRemark.frontmatter.featuredLinks.map(link => (
+              <span>
+                <a href={link.link} target="_blank" rel="noopener noreferrer">
+                  {link.linkTitle}
+                </a>
+              </span>
+            ))}
+          </div>
+        </aside>
+      )}
+    />
   );
 };
 
