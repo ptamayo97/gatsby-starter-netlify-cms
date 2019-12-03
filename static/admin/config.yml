@@ -152,12 +152,12 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
-          - {
-              label: "Calendar Link Title",
-              name: "calLinkTitle",
-              widget: "string",
-            }
-          - { label: "Calendar URL", name: "calURL", widget: "string" }
+          # - {
+          #     label: "Calendar Link Title",
+          #     name: "calLinkTitle",
+          #     widget: "string",
+          #   }
+          # - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/envision/index.md"
         label: "Envision Page"
         name: "envision"
@@ -207,13 +207,13 @@ collections:
                   name: "eventDescription",
                   widget: "string",
                 }
-              - { label: "Photo", name: "socialEventImage", widget: "string" }
-              - {
-                  label: "Calendar Link Title",
-                  name: "calLinkTitle",
-                  widget: "string",
-                }
-              - { label: "Calendar URL", name: "calURL", widget: "string" }
+              - { label: "Photo", name: "eventImage", widget: "string" }
+              # - {
+              #     label: "Calendar Link Title",
+              #     name: "calLinkTitle",
+              #     widget: "string",
+              #   }
+              # - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/professional/index.md"
         label: "Professional Page"
         name: "professional"
@@ -251,12 +251,12 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "profEventImage", widget: "string" }
-              - {
-                  label: "Calendar Link Title",
-                  name: "calLinkTitle",
-                  widget: "string",
-                }
-              - { label: "Calendar URL", name: "calURL", widget: "string" }
+              # - {
+              #     label: "Calendar Link Title",
+              #     name: "calLinkTitle",
+              #     widget: "string",
+              #   }
+              # - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/outreach/index.md"
         label: "Outreach Page"
         name: "outreach"
@@ -292,12 +292,12 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "outreachEventImage", widget: "string" }
-              - {
-                  label: "Calendar Link Title",
-                  name: "calLinkTitle",
-                  widget: "string",
-                }
-              - { label: "Calendar URL", name: "calURL", widget: "string" }
+              # - {
+              #     label: "Calendar Link Title",
+              #     name: "calLinkTitle",
+              #     widget: "string",
+              #   }
+              # - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/contact/index.md"
         label: "contact Page"
         name: "contact"
