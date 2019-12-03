@@ -2,11 +2,11 @@
 templateKey: sponsors
 title: Our Sponsors
 featuredSponsors:
-  - imgLink: /img/products-grid2.jpg
+  - sponsorImage: 'https://i.imgur.com/7OHTxeo.png'
     title: sponsor 1
-  - imgLink: /img/products-grid3.jpg
+  - sponsorImage: 'https://i.imgur.com/nAzTFP2.png'
     title: sponsor 2
-  - imgLink: /img/products-grid1.jpg
+  - sponsorImage: 'https://i.imgur.com/r1bi3aX.png'
     title: sponsor 3
 ---
 
