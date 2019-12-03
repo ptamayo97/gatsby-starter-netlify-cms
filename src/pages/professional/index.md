@@ -9,11 +9,9 @@ heading: asdf
 description: adf
 sectionTitle: UPCOMING PROFESSIONAL EVENTS
 sectionDescription: UCSD SWE is proud to present the following professional events
-profEvents:
-  - calLinkTitle: asf
-    calURL: fasf
-    profEventDescription: asdfafd
-    profEventImage: 'https://i.imgur.com/tvfQOdG.jpg'
-    profEventTitle: event
+pageEvents:
+  - eventDescription: ad;fljal;dfladjf;ljadf
+    eventTitle: professional event 1
+    profEventImage: 'https://i.imgur.com/W9kzquX.jpg'
 ---
 
