@@ -13,5 +13,10 @@ sectionDescription: >-
   socials with other female engineers, networking workshops with industry, and
   technical teams, UCSD SWE provides women engineers with a welcoming
   environment to grow professionally and academically.
+sweOfficers:
+  - email: mcgalvez@ucsd.edu
+    image: 'https://i.imgur.com/Y6rOo3m.jpg'
+    name: Maria Galvez
+    position: Vice President Internal
 ---
 
