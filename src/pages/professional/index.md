@@ -16,5 +16,8 @@ pageEvents:
   - eventDescription: asdfasd;fsadfsdf
     eventImage: 'https://i.imgur.com/oW5c6T0.jpg'
     eventTitle: professional event 2
+  - eventDescription: adfasdfasdfasdfasdfasdfasdfasdfasdfas
+    eventImage: 'https://i.imgur.com/tvfQOdG.jpg'
+    eventTitle: professional event 3
 ---
 
