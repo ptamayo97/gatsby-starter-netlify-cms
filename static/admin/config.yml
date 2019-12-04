@@ -161,12 +161,8 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: string }
           - { label: Subheading, name: subheading, widget: string }
-          # - {
-          #     label: "Calendar Link Title",
-          #     name: "calLinkTitle",
-          #     widget: "string",
-          #   }
-          # - { label: "Calendar URL", name: "calURL", widget: "string" }
+          - { label: Section Title, name: sectionTitle, widget: string }
+          - { label: Calendar URL, name: calURL, widget: string }
       - file: "src/pages/envision/index.md"
         label: "Envision Page"
         name: "envision"

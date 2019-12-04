@@ -7,13 +7,15 @@ import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import RecentEvents from "./recent-events";
 import Tabs from "../components/Tabs";
+import Calendar from "../components/Calendar";
 
 export const CalendarPageTemplate = ({
   image,
   title,
   subheading,
   sectionTitle,
-  sectionDescription
+  sectionDescription,
+  calUrl
 }) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
@@ -21,6 +23,7 @@ export const CalendarPageTemplate = ({
     <Main mainTitle={sectionTitle} mainDescription={sectionDescription}>
       <RecentEvents />
     </Main>
+    <Calendar calUrl={calUrl} />
   </Fragment>
 );
 
@@ -29,7 +32,8 @@ CalendarPageTemplate.propTypes = {
   title: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
-  sectionDescription: PropTypes.string
+  sectionDescription: PropTypes.string,
+  calUrl: PropTypes.string
 };
 
 const CalendarPage = ({ data }) => {
@@ -38,13 +42,11 @@ const CalendarPage = ({ data }) => {
   return (
     <Layout>
       <CalendarPageTemplate
+        calUrl={frontmatter.calURL}
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        sectionTitle={frontmatter.sectionTitle}
       />
     </Layout>
   );
@@ -69,6 +71,7 @@ export const pageQuery = graphql`
         subheading
         sectionTitle
         sectionDescription
+        calURL
       }
     }
   }
