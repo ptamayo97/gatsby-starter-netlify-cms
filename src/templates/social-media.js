@@ -9,7 +9,7 @@ const SocialMedia = () => {
           markdownRemark(frontmatter: { templateKey: { eq: "social-media" } }) {
             frontmatter {
               emailLink
-              instagram
+              instagramLink
               facebookLink
             }
           }
