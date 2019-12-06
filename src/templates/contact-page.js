@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import Tabs from "../components/Tabs";
+import ContactForm from "../components/ContactForm";
 
 export const ContactPageTemplate = ({
   image,
@@ -17,7 +18,9 @@ export const ContactPageTemplate = ({
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main></Main>
+    <Main>
+      <ContactForm />
+    </Main>
   </Fragment>
 );
 
@@ -35,7 +38,7 @@ const ContactPage = ({ data }) => {
   return (
     <Layout>
       <ContactPageTemplate
-        image={frontmatter.imageUrl}
+        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -62,7 +65,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "contact-page" } }) {
       frontmatter {
         title
-        # imageUrl
+        image
         subheading
       }
     }

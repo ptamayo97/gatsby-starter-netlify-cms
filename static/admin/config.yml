@@ -308,14 +308,8 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "eventImage", widget: "string" }
-              # - {
-              #     label: "Calendar Link Title",
-              #     name: "calLinkTitle",
-              #     widget: "string",
-              #   }
-              # - { label: "Calendar URL", name: "calURL", widget: "string" }
       - file: "src/pages/contact/index.md"
-        label: "contact Page"
+        label: "Contact Page"
         name: "contact"
         fields:
           - {
@@ -324,5 +318,8 @@ collections:
               widget: "hidden",
               default: "contact-page",
             }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
           - { label: Section Title, name: title, widget: string }
           - { label: Submit Link, name: submitLink, widget: string }
