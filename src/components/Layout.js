@@ -10,11 +10,41 @@ import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
+  // let title;
+  // switch (window.location.pathname) {
+  //   case "/":
+  //     title = "Home";
+  //     break;
+  //   case "/about":
+  //     title = "About";
+  //     break;
+  //   case "/calendar":
+  //     title = "Calendar";
+  //     break;
+  //   case "/envision":
+  //     title = "Envision";
+  //     break;
+  //   case "/social":
+  //     title = "Social";
+  //     break;
+  //   case "/professional":
+  //     title = "Professional";
+  //     break;
+  //   case "/outreach":
+  //     title = "Outreach";
+  //     break;
+  //   case "/contact":
+  //     title = "Contact";
+  //     break;
+  //   default:
+  //     title = "";
+  // }
   return (
     <div className="js">
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+
+        <title>{/*{title}&mdash;*/}Society of Women Engineers</title>
         <meta name="description" content={description} />
 
         <link

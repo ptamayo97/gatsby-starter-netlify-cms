@@ -1,6 +1,7 @@
 import React from "react";
 
 const PageEvents = props => {
+  console.log(props.pageEvents);
   return (
     <div class="module-container">
       {props.pageEvents.map((event, idx) => (

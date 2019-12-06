@@ -17,6 +17,7 @@ const ProfessionalPagePreview = ({ entry, getAsset }) => {
         description={data.description}
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
+        pageEvents={data.pageEvents}
       />
     );
   } else {
