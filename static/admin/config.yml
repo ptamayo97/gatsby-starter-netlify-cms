@@ -39,7 +39,7 @@ collections:
                   name: "sponsorImage",
                   widget: "string",
                 }
-      - file: "src/pages/SocialMedia/index.md"
+      - file: "src/pages/social-media/index.md"
         name: "social-media"
         label: "Social Media"
         create: false
@@ -52,8 +52,8 @@ collections:
               default: "social-media",
             }
           - { label: "Email", name: "emailLink", widget: "string" }
-          - { label: "Facebook", name: "facebookLink", widget: "string" }
           - { label: "Instagram", name: "instagramLink", widget: "string" }
+          - { label: "Facebook", name: "facebookLink", widget: "string" }
 
       - file: "src/pages/RecentEvents/index.md"
         name: "recent-events"

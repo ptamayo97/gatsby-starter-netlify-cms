@@ -17,9 +17,11 @@ const SocialMedia = () => {
       `}
       render={data => (
         <nav>
-          <a href="mailto:swe@eng.ucsd.edu">Email</a>
-          <a href="https://www.instagram.com/swe.ucsd/">Instagram</a>
-          <a href="https://www.facebook.com/sweucsd/">Facebook</a>
+          <a href={`mailto:${data.markdownRemark.frontmatter.emailLink}`}>
+            Email
+          </a>
+          <a href={data.markdownRemark.frontmatter.instagramLink}>Instagram</a>
+          <a href={data.markdownRemark.frontmatter.facebookLink}>Facebook</a>
         </nav>
       )}
     />
