@@ -3,8 +3,10 @@ templateKey: professional-page
 title: Professional
 image: 'https://i.imgur.com/F7LrVZh.jpg'
 subheading: >-
-  professional is a free all-day conference held at UC San Diego that exposes
-  high school girls to career possibilities in science and technology.
+  Networking, Resume Workshops, Technical Teams, and Career Fairs are all
+  examples of UC San Diego SWE’s commitment to professional development. Come
+  join us to gain industry contacts and meet with company representatives in a
+  diverse environment.
 heading: asdf
 description: adf
 sectionTitle: UPCOMING PROFESSIONAL EVENTS
