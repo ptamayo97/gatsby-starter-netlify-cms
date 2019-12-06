@@ -1,6 +1,7 @@
 ---
 templateKey: social-media
-emailLink: adfadfasdf
-facebookLink: adfadfasdf
-instagramLink: asdfasdff
+emailLink: swe@eng.ucsd.edu
+instagramLink: 'https://www.instagram.com/swe.ucsd/'
+facebookLink: 'https://www.facebook.com/sweucsd/'
 ---
+
