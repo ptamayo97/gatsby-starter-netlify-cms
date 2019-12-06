@@ -1,17 +1,16 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 
-const SocialLinks = () => {
+const SocialMedia = () => {
   return (
     <StaticQuery
       query={graphql`
         query SocialMediaComponentTemplate {
           markdownRemark(frontmatter: { templateKey: { eq: "social-media" } }) {
             frontmatter {
-              featuredEvents {
-                date
-                link
-                title
-              }
+              emailLink
+              instagram
+              facebookLink
             }
           }
         }
@@ -27,4 +26,4 @@ const SocialLinks = () => {
   );
 };
 
-export default SocialLinks;
+export default SocialMedia;
