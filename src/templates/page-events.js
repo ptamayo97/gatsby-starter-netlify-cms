@@ -14,7 +14,7 @@ const PageEvents = props => {
             />
           </center>
 
-          <a href="http://ucsdenvision.wixsite.com/envision ">
+          <a href="#">
             <h3>{event.eventTitle}</h3>
           </a>
           <p>{event.eventDescription}</p>

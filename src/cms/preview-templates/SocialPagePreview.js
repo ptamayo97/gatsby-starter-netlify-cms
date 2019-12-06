@@ -10,13 +10,11 @@ const SocialPagePreview = ({ entry, getAsset }) => {
       <SocialPageTemplate
         image={data.image}
         title={data.title}
-        heading={data.heading}
         subheading={data.subheading}
         sectionTitle={data.sectionTitle}
         sectionDescription={data.sectionDescription}
         description={data.description}
-        intro={data.intro || { blurbs: [] }}
-        mainpitch={data.mainpitch || {}}
+        pageEvents={data.pageEvents}
       />
     );
   } else {

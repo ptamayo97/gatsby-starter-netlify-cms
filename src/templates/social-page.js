@@ -7,6 +7,7 @@ import HeroSection from "../components/HeroSection";
 import Main from "../components/Main";
 import Tabs from "../components/Tabs";
 import PageEvents from "./page-events";
+import ToCalendar from "../components/ToCalendar";
 
 export const SocialPageTemplate = ({
   image,
@@ -21,6 +22,7 @@ export const SocialPageTemplate = ({
     <Tabs />
     <Main mainTitle={sectionTitle} mainDescription={sectionDescription}>
       <PageEvents pageEvents={pageEvents} />
+      <ToCalendar />
     </Main>
   </Fragment>
 );

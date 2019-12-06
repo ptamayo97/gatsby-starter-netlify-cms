@@ -13,13 +13,13 @@ export const ContactPageTemplate = ({
   title,
   subheading,
   sectionTitle,
-  sectionDescription
+  submitLink
 }) => (
   <Fragment>
     <HeroSection image={image} title={title} subheading={subheading} />
     <Tabs />
-    <Main>
-      <ContactForm />
+    <Main mainTitle={sectionTitle}>
+      <ContactForm formLink={submitLink} />
     </Main>
   </Fragment>
 );
@@ -29,7 +29,7 @@ ContactPageTemplate.propTypes = {
   title: PropTypes.string,
   subheading: PropTypes.string,
   sectionTitle: PropTypes.string,
-  sectionDescription: PropTypes.string
+  submitLink: PropTypes.string
 };
 
 const ContactPage = ({ data }) => {
@@ -40,11 +40,9 @@ const ContactPage = ({ data }) => {
       <ContactPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        sectionTitle={frontmatter.sectionTitle}
+        submitLink={frontmatter.submitLink}
       />
     </Layout>
   );
@@ -67,6 +65,8 @@ export const pageQuery = graphql`
         title
         image
         subheading
+        sectionTitle
+        submitLink
       }
     }
   }
