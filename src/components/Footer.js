@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import Sponsors from "../templates/sponsors";
+import SocialMedia from "../templates/social-media";
 
 const Footer = class extends React.Component {
   state = {
@@ -46,12 +47,7 @@ const Footer = class extends React.Component {
           </div>
         </div> */}
         <Sponsors />
-
-        <nav>
-          <a href="mailto:swe@eng.ucsd.edu">Email</a>
-          <a href="https://www.instagram.com/swe.ucsd/">Instagram</a>
-          <a href="https://www.facebook.com/sweucsd/">Facebook</a>
-        </nav>
+        <SocialMedia />
       </footer>
     );
   }
