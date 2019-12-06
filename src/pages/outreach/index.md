@@ -1,7 +1,7 @@
 ---
 templateKey: outreach-page
 title: Outreach
-image: /img/home-jumbotron.jpg
+image: 'https://i.imgur.com/iHPKut7.jpg'
 subheading: Join the women of UCSD SWE as we inspire future women in STEM.
 sectionTitle: UPCOMING OUTREACH EVENTS
 sectionDescription: >-
