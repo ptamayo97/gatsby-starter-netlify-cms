@@ -24,7 +24,7 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: "nav-on"
+              navBarActiveClass: "active"
             })
           : this.setState({
               navBarActiveClass: ""
@@ -94,13 +94,18 @@ const Navbar = class extends React.Component {
       // </nav>
       <div id="pattern" className="pattern">
         <a
-          className="menu-link"
-          href="#0"
-          // onClick={() => this.toggleHamburger()}
+          className={`menu-link ${this.state.navBarActiveClass}`}
+          href="#"
+          onClick={() => this.toggleHamburger()}
+          style={{ cursor: "pointer" }}
         >
           &#9776;
         </a>
-        <nav id="menu" role="navigation" className="z-depth-3 ">
+        <nav
+          id="menu"
+          role="navigation"
+          className={`z-depth-3 ${this.state.navBarActiveClass}`}
+        >
           <ul>
             <li>
               <Link to="/">Home</Link>

@@ -1,6 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import moment from "moment";
 import "../../components/style.css";
 
 const EventsCompPreview = ({ entry, getAsset }) => {
