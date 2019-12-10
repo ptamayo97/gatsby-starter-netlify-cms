@@ -7,18 +7,19 @@ subheading: >-
   examples of UC San Diego SWE’s commitment to professional development. Come
   join us to gain industry contacts and meet with company representatives in a
   diverse environment.
-heading: asdf
-description: adf
 sectionTitle: UPCOMING PROFESSIONAL EVENTS
 sectionDescription: UCSD SWE is proud to present the following professional events
 pageEvents:
-  - eventDescription: ad;fljal;dfladjf;ljadf
+  - evenLink: 'http://swe.ucsd.edu/professional/'
+    eventDescription: ad;fljal;dfladjf;ljadf
     eventImage: 'https://i.imgur.com/W9kzquX.jpg'
     eventTitle: professional event 1
-  - eventDescription: asdfasd;fsadfsdf
+  - evenLink: 'http://swe.ucsd.edu/'
+    eventDescription: asdfasd;fsadfsdf
     eventImage: 'https://i.imgur.com/oW5c6T0.jpg'
     eventTitle: professional event 2
-  - eventDescription: adfasdfasdfasdfasdfasdfasdfasdfasdfas
+  - evenLink: link
+    eventDescription: adfasdfasdfasdfasdfasdfasdfasdfasdfas
     eventImage: 'https://i.imgur.com/tvfQOdG.jpg'
     eventTitle: professional event 3
 ---
