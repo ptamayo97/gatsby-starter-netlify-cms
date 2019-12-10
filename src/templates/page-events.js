@@ -14,7 +14,7 @@ const PageEvents = props => {
             />
           </center>
 
-          <a href="#">
+          <a href={event.eventLink}>
             <h3>{event.eventTitle}</h3>
           </a>
           <p>{event.eventDescription}</p>
