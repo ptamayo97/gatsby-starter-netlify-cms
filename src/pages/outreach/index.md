@@ -8,10 +8,12 @@ sectionDescription: >-
   Stay tuned for new outreach events. Please visit our Envision page to learn
   about our annual outreach.
 pageEvents:
-  - eventDescription: asdfasdfasdfasdfadsfas
+  - evenLink: link
+    eventDescription: asdfasdfasdfasdfadsfas
     eventImage: 'https://i.imgur.com/bk3c3nz.jpg'
     eventTitle: outreach event 1
-  - eventDescription: asdfasdfasdfasdfasdfasdfasdfasdfasd
+  - evenLink: link
+    eventDescription: asdfasdfasdfasdfasdfasdfasdfasdfasd
     eventImage: 'https://i.imgur.com/rpcTaTl.jpg'
     eventTitle: outreach event 2
 ---
