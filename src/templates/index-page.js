@@ -42,7 +42,6 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         sectionTitle={frontmatter.sectionTitle}
         sectionDescription={frontmatter.sectionDescription}
-        // events={frontmatter.featuredEvents}
       />
     </Layout>
   );

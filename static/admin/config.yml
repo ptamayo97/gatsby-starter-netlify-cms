@@ -190,7 +190,7 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "eventImage", widget: "string" }
-              - { label: "Link", name: "evenLink", widget: "string" }
+              - { label: "Link", name: "eventLink", widget: "string" }
       - file: "src/pages/social/index.md"
         label: "Social Page"
         name: "social"
@@ -226,7 +226,7 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "eventImage", widget: "string" }
-              - { label: "Link", name: "evenLink", widget: "string" }
+              - { label: "Link", name: "eventLink", widget: "string" }
       - file: "src/pages/professional/index.md"
         label: "Professional Page"
         name: "professional"
@@ -262,7 +262,7 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "eventImage", widget: "string" }
-              - { label: "Link", name: "evenLink", widget: "string" }
+              - { label: "Link", name: "eventLink", widget: "string" }
       - file: "src/pages/outreach/index.md"
         label: "Outreach Page"
         name: "outreach"
@@ -298,7 +298,7 @@ collections:
                   widget: "string",
                 }
               - { label: "Photo", name: "eventImage", widget: "string" }
-              - { label: "Link", name: "evenLink", widget: "string" }
+              - { label: "Link", name: "eventLink", widget: "string" }
       - file: "src/pages/contact/index.md"
         label: "Contact Page"
         name: "contact"
